@@ -33,6 +33,13 @@ public class ReversedWordsAreThese {
         return input.toString();
     }
 
+    /**
+     * O(N) where N is endIdx - startIdx
+     *
+     * @param input
+     * @param startIdx
+     * @param endIdx
+     */
     protected static void reverseStringBuffer(StringBuffer input, int startIdx, int endIdx) {
         for (int index = startIdx; index <= startIdx + (endIdx - startIdx) / 2; index++) {
             char temp = input.charAt(index);
