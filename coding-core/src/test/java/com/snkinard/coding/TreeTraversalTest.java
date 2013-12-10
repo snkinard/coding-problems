@@ -84,4 +84,8 @@ public class TreeTraversalTest {
             throws Exception {
         AssertJUnit.assertEquals("Broke-ass shit!!", "a \nb c \nd e f g \nh i j", TreeTraversal.levelorderNewline(knaryTree));
     }
+
+    @Test void testLevelorderMatt() {
+        AssertJUnit.assertEquals("Broke-ass shit!!", "f b g a d i c e h", TreeTraversal.levelorderMatt(binaryTree));
+    }
 }
