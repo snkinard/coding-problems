@@ -10,9 +10,11 @@
 
     <name>Coding Problems Parent</name>
 
+    <!--
     <scm>
         <connection>scm:git:git@github.com:snkinard/coding-problems.git</connection>
     </scm>
+    -->
 
     <properties>
         <!-- Testing -->
@@ -58,8 +60,8 @@
                 <version>3.1</version>
                 <!-- compile for Java 1.7 -->
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
@@ -79,11 +81,11 @@
                             <rules>
                                 <requireMavenVersion>
                                     <!--Any 3.0 version - See http://maven.apache.org/enforcer/enforcer-rules/versionRanges.html for an explanation of version ranges-->
-                                    <version>[3.0,3.1)</version>
+                                    <version>[3.3,3.4)</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
                                     <!--Any 1.7 version - See http://maven.apache.org/enforcer/enforcer-rules/versionRanges.html for an explanation of version ranges-->
-                                    <version>[1.7,1.8)</version>
+                                    <version>[1.8,1.9)</version>
                                 </requireJavaVersion>
                             </rules>
                         </configuration>
