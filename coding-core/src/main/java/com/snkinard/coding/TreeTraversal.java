@@ -153,6 +153,35 @@ public class TreeTraversal {
         }
         return result.toString().trim();
     }
+
+    public static String levelorderMatt(BinaryTree tree) {
+        if (tree == null) {
+            return "";
+        }
+
+        List<BinaryTree> levelOrder = new ArrayList<BinaryTree>();
+        levelOrder.add(tree);
+
+        int currentIndex = 0;
+        while (currentIndex < levelOrder.size()) {
+            BinaryTree nextNode = levelOrder.get(currentIndex);
+            if (nextNode.getLeftChild() != null) {
+                levelOrder.add(nextNode.getLeftChild());
+            }
+            if (nextNode.getRightChild() != null) {
+                levelOrder.add(nextNode.getRightChild());
+            }
+            currentIndex++;
+        }
+
+        StringBuilder output = new StringBuilder();
+        for (BinaryTree node : levelOrder) {
+            output.append(node.getData() + " ");
+        }
+
+        return output.toString().trim();
+    }
+
 }
 
 class BinaryTree {
